@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('app_icon');
             $table->string('name', 50);
             $table->string('domain', 50)->unique();
+            $table->string('school_id', 20)->unique();
             $table->timestamps();
         });
     }

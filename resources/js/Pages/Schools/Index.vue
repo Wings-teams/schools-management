@@ -11,6 +11,7 @@ defineProps<{
         app_icon_url: string;
         name: string;
         domain: string;
+        school_id: string;
         created_at: string;
     }>;
 }>();
@@ -63,6 +64,11 @@ const formatDate = (dateString: string) => {
                                         <th
                                             class="px-4 py-3 text-gray-900 dark:text-gray-300"
                                         >
+                                            Identifier
+                                        </th>
+                                        <th
+                                            class="px-4 py-3 text-gray-900 dark:text-gray-300"
+                                        >
                                             Created At
                                         </th>
                                         <th
@@ -93,6 +99,11 @@ const formatDate = (dateString: string) => {
                                             class="px-4 py-3 text-gray-900 dark:text-gray-300"
                                         >
                                             {{ school.domain }}
+                                        </td>
+                                        <td
+                                            class="px-4 py-3 text-gray-900 dark:text-gray-300"
+                                        >
+                                            {{ school.school_id }}
                                         </td>
                                         <td
                                             class="px-4 py-3 text-gray-900 dark:text-gray-300"

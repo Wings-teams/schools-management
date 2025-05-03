@@ -13,6 +13,7 @@ const props = defineProps<{
         app_icon: string;
         name: string;
         domain: string;
+        school_id: string;
     };
 }>();
 
@@ -20,6 +21,7 @@ const form = useForm({
     app_icon: null as File | null,
     name: props.school.name,
     domain: props.school.domain,
+    school_id: props.school.school_id,
 });
 
 const submit = () => {
@@ -82,6 +84,19 @@ const submit = () => {
                             />
                             <InputError
                                 :message="form.errors.domain"
+                                class="mt-2"
+                            />
+                        </div>
+
+                        <div>
+                            <InputLabel value="Identifier" />
+                            <TextInput
+                                v-model="form.school_id"
+                                class="mt-1 block w-full"
+                                required
+                            />
+                            <InputError
+                                :message="form.errors.school_id"
                                 class="mt-2"
                             />
                         </div>

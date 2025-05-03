@@ -25,6 +25,7 @@ class UpdateSchoolRequest extends FormRequest
             'app_icon' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required|string|max:50',
             'domain' => 'required|string|max:50|unique:schools,domain,' . $this->school->id,
+            'school_id' => 'required|string|max:20|unique:schools,school_id,' . $this->school->id,
         ];
     }
 }

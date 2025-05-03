@@ -9,6 +9,7 @@ const props = defineProps<{
         app_icon_url: string;
         name: string;
         domain: string;
+        school_id: string;
         created_at: string;
         updated_at: string;
     };
@@ -61,6 +62,16 @@ const formatDate = (dateString: string) => {
                             >
                             <p class="mt-1 text-gray-900 dark:text-gray-100">
                                 {{ school.domain }}
+                            </p>
+                        </div>
+
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                >Identifier</label
+                            >
+                            <p class="mt-1 text-gray-900 dark:text-gray-100">
+                                {{ school.school_id }}
                             </p>
                         </div>
 
